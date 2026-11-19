@@ -107,13 +107,6 @@ function Index() {
         <ArrowUpRight className="size-3.5" />
       </div>
       <section className="hero">
-        <img
-          src={mother.url}
-          alt="Mãe acolhendo seu bebê adormecido em um momento de descanso"
-          className="hero-photo"
-          fetchPriority="high"
-        />
-        <div className="hero-wash" />
         <div className="page-width relative z-10">
           <header className="hero-header">
             <Brand />
@@ -130,6 +123,71 @@ function Index() {
               <br className="hidden md:block" /> fortunas em <span>pomada cara</span> para cicatriz
               de cesárea.
             </h1>
+            <div
+              className="mockup-scene"
+              aria-label="Ilustração da área de membros do Protocolo Cicatriz Invisível"
+            >
+              <div className="mockup-label label-top">
+                <ShieldCheck />
+                <span>
+                  Um cuidado completo<strong>Sem complicar sua rotina</strong>
+                </span>
+              </div>
+              <div className="phone">
+                <div className="phone-island" />
+                <div className="phone-screen">
+                  <div className="phone-top">
+                    <span>9:41</span>
+                    <span>● ▰</span>
+                  </div>
+                  <div className="phone-brand">
+                    <Heart className="size-4" /> CICATRIZ INVISÍVEL
+                  </div>
+                  <p className="phone-welcome">Um dia de cada vez.</p>
+                  <h3>
+                    Seu cuidado
+                    <br />
+                    começa aqui.
+                  </h3>
+                  <div className="phone-cover">
+                    <img src={mother.url} alt="" loading="lazy" />
+                    <span>
+                      PROGRAMA COMPLETO
+                      <br />
+                      <strong>Cicatriz Invisível</strong>
+                      <small>+ Sono de Mãe</small>
+                    </span>
+                  </div>
+                  <div className="phone-heading">
+                    Seu protocolo <span>3 módulos</span>
+                  </div>
+                  {modules.map(({ icon: Icon, number, title }) => (
+                    <div className="phone-module" key={number}>
+                      <span className="phone-module-icon">
+                        <Icon />
+                      </span>
+                      <div>
+                        <small>MÓDULO {number}</small>
+                        <strong>{title}</strong>
+                      </div>
+                      <Play className="size-3" />
+                    </div>
+                  ))}
+                  <div className="phone-bottom">
+                    <Heart />
+                    <span>Meu protocolo</span>
+                    <Sun />
+                    <span>Meu cuidado</span>
+                  </div>
+                </div>
+              </div>
+              <div className="mockup-label label-bottom">
+                <Check />
+                <span>
+                  Alimentação + movimento<strong>+ noites mais tranquilas</strong>
+                </span>
+              </div>
+            </div>
             <p className="hero-description">
               Uma receita simples + exercícios no seu ritmo + técnicas de sono. Um caminho de
               cuidado para você e seu bebê, por apenas <strong>R$ 29,90.</strong>
@@ -141,109 +199,42 @@ function Index() {
             <p className="hero-footnote">Menos gastos. Mais cuidado com você.</p>
           </div>
         </div>
-        <div className="photo-caption">
-          <Heart className="size-4" />
-          <span>
-            Você cuida de uma vida.
-            <br />
-            <strong>Agora, é hora de cuidar de você.</strong>
-          </span>
-        </div>
       </section>
 
-      <section className="product-section section-space">
-        <div className="page-width product-grid">
-          <div className="product-copy">
-            <div className="eyebrow">UM PROTOCOLO. TRÊS FORMAS DE CUIDAR.</div>
-            <h2>
-              Seu recomeço.
-              <br />
-              <span className="text-primary">Na palma da mão.</span>
-            </h2>
-            <p>
-              Tudo organizado em um só lugar,
-              <br className="hidden md:block" /> para você fazer no seu tempo.
-            </p>
-            <div className="product-perks">
-              <span>
-                <Smartphone /> 100% digital
-              </span>
-              <span>
-                <Timer /> No seu ritmo
-              </span>
-              <span>
-                <LockKeyhole /> Acesso imediato
-              </span>
-            </div>
-            <div className="product-signature">
-              Cicatriz Invisível <span>+ Sono de Mãe</span>
-              <ArrowDown />
-            </div>
-          </div>
+      <section className="vsl-section section-space" aria-labelledby="vsl-title">
+        <div className="page-width vsl-width">
+          <h2 id="vsl-title">Assista antes de decidir</h2>
           <div
-            className="mockup-scene"
-            aria-label="Ilustração da área de membros do Protocolo Cicatriz Invisível"
+            className="vsl-placeholder"
+            role="region"
+            aria-label="Espaço reservado para a mini VSL"
           >
-            <div className="mockup-label label-top">
-              <ShieldCheck />
-              <span>
-                Um cuidado completo<strong>Sem complicar sua rotina</strong>
-              </span>
-            </div>
-            <div className="phone">
-              <div className="phone-island" />
-              <div className="phone-screen">
-                <div className="phone-top">
-                  <span>9:41</span>
-                  <span>● ▰</span>
-                </div>
-                <div className="phone-brand">
-                  <Heart className="size-4" /> CICATRIZ INVISÍVEL
-                </div>
-                <p className="phone-welcome">Um dia de cada vez.</p>
-                <h3>
-                  Seu cuidado
-                  <br />
-                  começa aqui.
-                </h3>
-                <div className="phone-cover">
-                  <img src={mother.url} alt="" loading="lazy" />
-                  <span>
-                    PROGRAMA COMPLETO
-                    <br />
-                    <strong>Cicatriz Invisível</strong>
-                    <small>+ Sono de Mãe</small>
-                  </span>
-                </div>
-                <div className="phone-heading">
-                  Seu protocolo <span>3 módulos</span>
-                </div>
-                {modules.map(({ icon: Icon, number, title }) => (
-                  <div className="phone-module" key={number}>
-                    <span className="phone-module-icon">
-                      <Icon />
-                    </span>
-                    <div>
-                      <small>MÓDULO {number}</small>
-                      <strong>{title}</strong>
-                    </div>
-                    <Play className="size-3" />
-                  </div>
-                ))}
-                <div className="phone-bottom">
-                  <Heart />
-                  <span>Meu protocolo</span>
-                  <Sun />
-                  <span>Meu cuidado</span>
-                </div>
+            <span className="vsl-play" aria-hidden="true">
+              <Play />
+            </span>
+            <strong>Mini VSL</strong>
+            <span>Vídeo de apresentação em breve</span>
+          </div>
+        </div>
+      </section>
+      <section className="audience-section section-space">
+        <div className="page-width audience-width">
+          <h2>Esse protocolo é para você se…</h2>
+          <div className="pain-list">
+            <span className="list-overline">SE VOCÊ SE RECONHECE AQUI…</span>
+            {pains.map((pain) => (
+              <div key={pain}>
+                <span className="pain-icon">
+                  <X />
+                </span>
+                <p>{pain}</p>
               </div>
-            </div>
-            <div className="mockup-label label-bottom">
-              <Check />
-              <span>
-                Alimentação + movimento<strong>+ noites mais tranquilas</strong>
-              </span>
-            </div>
+            ))}
+            <p className="pain-closing">
+              Você não falhou.
+              <br />
+              <strong>Seu cuidado merece um caminho mais simples.</strong>
+            </p>
           </div>
         </div>
       </section>
@@ -278,22 +269,6 @@ function Index() {
               <blockquote>“Por que essa pochete não some?”</blockquote>
             </div>
           </div>
-          <div className="pain-list">
-            <span className="list-overline">SE VOCÊ SE RECONHECE AQUI…</span>
-            {pains.map((pain) => (
-              <div key={pain}>
-                <span className="pain-icon">
-                  <X />
-                </span>
-                <p>{pain}</p>
-              </div>
-            ))}
-            <p className="pain-closing">
-              Você não falhou.
-              <br />
-              <strong>Seu cuidado merece um caminho mais simples.</strong>
-            </p>
-          </div>
         </div>
       </section>
 
@@ -309,6 +284,41 @@ function Index() {
               O que você coloca no corpo. Como você se movimenta.
               <br className="hidden sm:block" /> E o descanso que você também merece.
             </p>
+          </div>
+          <div className="product-copy">
+            <div className="eyebrow">UM PROTOCOLO. TRÊS FORMAS DE CUIDAR.</div>
+            <h2>
+              Seu recomeço.
+              <br />
+              <span className="text-primary">Na palma da mão.</span>
+            </h2>
+            <p>
+              Tudo organizado em um só lugar,
+              <br className="hidden md:block" /> para você fazer no seu tempo.
+            </p>
+            <div className="product-perks">
+              <span>
+                <Smartphone /> 100% digital
+              </span>
+              <span>
+                <Timer /> No seu ritmo
+              </span>
+              <span>
+                <LockKeyhole /> Acesso imediato
+              </span>
+            </div>
+            <div className="product-signature">
+              Cicatriz Invisível <span>+ Sono de Mãe</span>
+              <ArrowDown />
+            </div>
+          </div>
+          <div className="photo-caption">
+            <Heart className="size-4" />
+            <span>
+              Você cuida de uma vida.
+              <br />
+              <strong>Agora, é hora de cuidar de você.</strong>
+            </span>
           </div>
           <div className="module-grid">
             {modules.map(({ icon: Icon, number, title, description, tag }) => (
