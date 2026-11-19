@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project architecture
+- Keep offer values and the external checkout destination in `src/lib/offer.ts` so every purchase action uses the same offer; without a destination, show an honest unavailable-payment dialog.
+- Keep the sales funnel as ordered sections on the index route because the requested experience is one continuous scrolling page.
