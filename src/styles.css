@@ -1780,3 +1780,118 @@ h1 span {
     font-size: 16px;
   }
 }
+
+/* Keep the product screen and its captions in normal flow at every width. */
+.hero .mockup-scene {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  justify-items: center;
+  gap: 20px 12px;
+  width: min(100%, 460px);
+  min-height: 0;
+  padding: 8px 0;
+  margin: 28px auto 12px;
+}
+.hero .phone {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  width: min(250px, 100%);
+  height: auto;
+  min-height: 0;
+  transform: none;
+}
+.hero .phone-screen {
+  height: auto;
+  min-height: 480px;
+  padding: 14px 14px 18px;
+  text-align: left;
+}
+.hero .phone-module {
+  min-width: 0;
+}
+.hero .phone-module-icon {
+  flex-shrink: 0;
+}
+.hero .phone-module div {
+  min-width: 0;
+}
+.hero .phone-module strong {
+  font-size: 10px;
+  line-height: 1.4;
+}
+.hero .phone-module > svg {
+  flex-shrink: 0;
+}
+.hero .phone-bottom {
+  flex-wrap: wrap;
+  line-height: 1.5;
+}
+.hero .mockup-label {
+  position: static;
+  grid-row: 2;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  padding: 12px 10px;
+  font-size: 11px;
+  line-height: 1.45;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero .mockup-label > svg {
+  width: 18px;
+  min-width: 18px;
+}
+.hero .label-top {
+  grid-column: 1;
+}
+.hero .label-bottom {
+  grid-column: 2;
+}
+.hero-description strong {
+  white-space: nowrap;
+}
+.purchase-button {
+  max-width: 100%;
+}
+.purchase-button > span {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.module-grid > *,
+.price-layout > *,
+.transformation-grid > *,
+.guarantee-box > * {
+  min-width: 0;
+}
+@media (max-width: 640px) {
+  .hero .mockup-scene {
+    gap: 16px 10px;
+    margin-top: 24px;
+  }
+  .hero .phone {
+    width: min(250px, 100%);
+    height: auto;
+  }
+  .hero .phone-screen {
+    height: auto;
+  }
+  .hero .mockup-label {
+    font-size: 11px;
+    padding: 10px;
+  }
+  .price {
+    font-size: clamp(64px, 22vw, 88px);
+    flex-wrap: nowrap;
+  }
+  .price .price-cents {
+    font-size: 0.6em;
+  }
+  .price > span:first-child {
+    font-size: 0.28em;
+    margin-right: 6px;
+  }
+}
